@@ -1,5 +1,6 @@
 import React from 'react'
 import assets from '../assets/assets.js'
+import ThemeToggleBtn from './ThemeToggleBtn.jsx'
 
 const Navbar = ({theme, setTheme}) => {
   return (
@@ -19,7 +20,13 @@ const Navbar = ({theme, setTheme}) => {
         <a href='#contact-us' className='sm:hover:border-b'>Contact Us</a>
       </div>
 
-      <div>
+      <div className='flex items-center gap-2 sm:gap-4'>
+
+        <ThemeToggleBtn theme={theme} setTheme={setTheme}/>
+
+        <img src={theme === 'dark' ? assets.menu_icon_dark : assets.menu_icon}
+        alt='' onClick={()=> setSidebarOpen(true)} className='w-8 sm:hidden' />
+
         <a href='#contact-us' className='text-sm max-sm:hidden flex items-center gap-2 bg-primary 
         text-white px-6 py-2 rounded-full cursor-pointer hover:scale-103 transition-all'>
           Connect <img src={assets.arrow_icon} width={14} alt=''/>
