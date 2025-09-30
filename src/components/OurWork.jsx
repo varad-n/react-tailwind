@@ -10,4 +10,4 @@ const OutWork = () => {
   )
 }
 
-export default OutWork
+export default OurWork
