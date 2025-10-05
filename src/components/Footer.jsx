@@ -10,7 +10,7 @@ const Footer = ({theme}) => {
                 <img src={theme === 'dark' ? assets.logo_dark : assets.logo} className='w-32 sm:w-44' alt="" />
                 <p>From strategy to execution, we craft digital solutions that move your business forward.</p>
 
-                <ul>
+                <ul className='flex gap-8'>
                   <li><a className='hover:text-primary' href='#hero'>Home</a></li>
                   <li><a className='hover:text-primary' href='#services'>Services</a></li>
                   <li><a className='hover:text-primary' href='#our-work'>Our Work</a></li>
@@ -18,7 +18,15 @@ const Footer = ({theme}) => {
                 </ul>
 
             </div>
-            <div></div>
+            <div className='text-gray-600 dark:text-gray-400'>
+              <h3 className='font-smibold'>Subscribe to our Newsletter</h3>
+              <p className='text-sm mt-2 mb-6'>The latest news, articles, and resources sent to your inbox weekly.</p>
+              <div className='flex gap-2 text-sm'>
+                <input type="email" placeholder='Enter your email' className='w-full p-3 text-sm outline-none rounded 
+                dark:text-gray-200 bg-transparent border border-gray-300 dark:border-gray-500'/>
+                <button className='bg-primary text-white rounded px-6'>Subscribe</button>
+              </div>
+            </div>
         </div>
     </div>
   )
