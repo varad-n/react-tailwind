@@ -16,7 +16,7 @@ const Footer = ({theme}) => {
                   <li><a className='hover:text-primary' href='#our-work'>Our Work</a></li>
                   <li><a className='hover:text-primary' href='#contact-us'>Contact Us</a></li>
                 </ul>
-
+ 
             </div>
             <div className='text-gray-600 dark:text-gray-400'>
               <h3 className='font-smibold'>Subscribe to our Newsletter</h3>
@@ -27,6 +27,18 @@ const Footer = ({theme}) => {
                 <button className='bg-primary text-white rounded px-6'>Subscribe</button>
               </div>
             </div>
+        </div>
+        <hr className='border-gray-300 dark:border-gray-600 my-6'/>
+
+        {/* Footer Bottom*/}
+        <div className='pb-6 text-sm text-gray-500 flex justify-center sm:justify-between gap-4 flex-wrap'>
+          <p>Copyright 2025 © Agency - All Rights Reserved</p>
+          <div className='flex items-center justify-between gap-4'>
+            <img src={assets.facebook_icon} alt="" />
+            <img src={assets.twitter_icon} alt="" />
+            <img src={assets.instagram_icon} alt="" />
+            <img src={assets.linkedin_icon} alt="" />
+          </div>
         </div>
     </div>
   )
