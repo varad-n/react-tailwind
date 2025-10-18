@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrustedBy from './components/TrustedBy'
@@ -9,6 +9,9 @@ import ContactUs from './components/ContactUs'
 import Footer from './components/Footer'
 
 const App = () => {
+
+  const dotRef = useRef(null)
+  const outlineRef = useRef(null) 
 
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
 
